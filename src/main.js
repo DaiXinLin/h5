@@ -4,13 +4,9 @@ import router from "./router";
 import store from "./store";
 import Vant from "vant";
 import "vant/lib/index.css";
-// import { Form } from "vant";
-// import { Field } from "vant";
 
 Vue.config.productionTip = false;
 Vue.use(Vant);
-// Vue.use(Form);
-// Vue.use(Field);
 
 new Vue({
   router,
