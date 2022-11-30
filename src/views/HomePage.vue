@@ -98,9 +98,9 @@ export default {
   width: 100px;
   border: 1px solid #eee;
 }
-// .hospital .hospital_box .hospital_box_shadow {
-//   height: 32px;
-//   width: 32px;
-//   background-color: rgba(0, 110, 255, 0.0980392156862745);
-// }
+.hospital_box_shadow {
+  height: 32px;
+  width: 32px;
+  background-color: rgba(0, 110, 255, 0.0980392156862745);
+}
 </style>

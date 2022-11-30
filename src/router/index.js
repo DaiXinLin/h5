@@ -4,6 +4,7 @@ import LoginForm from "../views/LoginForm.vue";
 import HomePage from "../views/HomePage.vue";
 import RegisterPage from "../views/RegisterPage.vue";
 import PersonalCenter from "../views/PersonalCenter.vue";
+import ScheduleList from "../views/ScheduleList.vue";
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,11 @@ const routes = [
     path: "/personal",
     name: "personal",
     component: PersonalCenter,
+  },
+  {
+    path: "/schedule",
+    name: "schedule",
+    component: ScheduleList,
   },
 ];
 
