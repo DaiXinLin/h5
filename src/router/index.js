@@ -46,6 +46,7 @@ const routes = [
   {
     path: "/",
     component: Layout,
+    redirect: "/home",
     children: [
       {
         path: "/home",
