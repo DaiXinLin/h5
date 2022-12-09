@@ -1,7 +1,7 @@
 <template>
   <div class="percer">
+    <van-nav-bar title="个人中心" />
     <div class="percer_top">
-      <span>个人中心</span>
       <div class="percer_top_middle">
         <div class="shawol"></div>
         <div class="wenzi">
@@ -29,10 +29,22 @@
 
 <script>
 export default {
-  data() {},
+  data() {
+    return {};
+  },
   methods: {},
 };
 </script>
+<style lang="less">
+.percer {
+  .van-nav-bar__content {
+    background-color: rgba(52, 120, 247, 1);
+  }
+  .van-hairline--bottom::after {
+    border-bottom-width: 0px;
+  }
+}
+</style>
 
 <style lang="less" scoped>
 * {
@@ -54,40 +66,45 @@ export default {
 .percer_top_middle {
   font-size: 17px;
   color: #ffffff;
-  margin: 20px;
+  padding: 10px 15px;
   display: flex;
-}
-.percer_top_middle .shawol {
-  width: 50px;
-  height: 50px;
-  background-color: #eee;
-  border-radius: 40px;
-}
-.percer_top_middle .wenzi {
-  margin-left: 20px;
-}
-.percer_top_middle .wenzi .xia {
-  margin-top: 8px;
+
+  .shawol {
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+    border-radius: 40px;
+  }
+
+  .wenzi {
+    margin-left: 20px;
+
+    .xia {
+      margin-top: 8px;
+    }
+  }
 }
 .percer_bottom {
   margin: 30px 20px;
   border: 1px solid #eee;
   border-radius: 5px;
-}
-.percer_bottom li {
-  display: flex;
-  padding-top: 10px;
-  padding-left: 10px;
-  height: 55px;
-  line-height: 45px;
-}
-.percer_bottom .yingzi {
-  height: 40px;
-  width: 40px;
-  background-color: rgba(0, 110, 255, 0.0980392156862745);
-  border-radius: 40px;
-}
-.percer_bottom li p {
-  padding-left: 10px;
+
+  li {
+    display: flex;
+    padding-top: 10px;
+    padding-left: 10px;
+    height: 55px;
+    line-height: 45px;
+
+    p {
+      padding-left: 10px;
+    }
+  }
+  .yingzi {
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0, 110, 255, 0.0980392156862745);
+    border-radius: 40px;
+  }
 }
 </style>

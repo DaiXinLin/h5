@@ -1,20 +1,72 @@
 <template>
-  <van-tabs v-model="active">
-    <van-tab title="标签 1">内容 1</van-tab>
-    <van-tab title="标签 2">内容 2</van-tab>
-    <van-tab title="标签 3">内容 3</van-tab>
-    <van-tab title="标签 4">内容 4</van-tab>
-  </van-tabs>
+  <div class="schedule">
+    <van-nav-bar title="选择科室" left-arrow @click-left="onClickLeft" />
+    <van-tabs v-model="active">
+      <van-tab title="湖南院区">
+        <van-tree-select
+          :items="items"
+          :active-id.sync="activeId"
+          :main-active-index.sync="activeIndex"
+        />
+      </van-tab>
+      <van-tab title="东院">
+        <van-tree-select
+          :items="items"
+          :active-id.sync="activeId"
+          :main-active-index.sync="activeIndex"
+        />
+      </van-tab>
+      <van-tab title="北院">
+        <van-tree-select
+          :items="items"
+          :active-id.sync="activeId"
+          :main-active-index.sync="activeIndex"
+        />
+      </van-tab>
+    </van-tabs>
+  </div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      active: 2,
+      active: 0,
+      items: [
+        {
+          text: "浙江",
+          className: "my-class",
+          children: [
+            {
+              text: "温州",
+              id: 1,
+            },
+            {
+              text: "杭州",
+              id: 2,
+            },
+          ],
+        },
+        {
+          text: "浙江1",
+          className: "my-class",
+          children: [
+            {
+              text: "温州1",
+              id: 1,
+            },
+            {
+              text: "杭州1",
+              id: 2,
+            },
+          ],
+        },
+      ],
+      activeId: 1,
+      activeIndex: 0,
     };
   },
-  methods: {},
+  methods() {},
 };
 </script>
 
