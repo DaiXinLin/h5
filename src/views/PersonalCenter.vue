@@ -11,7 +11,7 @@
       </div>
     </div>
     <ul class="percer_bottom">
-      <li>
+      <li @click="peopleAdministra">
         <div class="yingzi"></div>
         <p>就诊人管理</p>
       </li>
@@ -32,13 +32,23 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    peopleAdministra() {
+      this.$router.push({
+        path: "/peopleadministra",
+      });
+    },
+  },
 };
 </script>
 <style lang="less">
 .percer {
   .van-nav-bar__content {
     background-color: rgba(52, 120, 247, 1);
+    .van-nav-bar__title {
+      color: #eee;
+      font-weight: 540;
+    }
   }
   .van-hairline--bottom::after {
     border-bottom-width: 0px;
@@ -47,10 +57,6 @@ export default {
 </style>
 
 <style lang="less" scoped>
-* {
-  margin: 0;
-  padding: 0;
-}
 .percer span {
   display: block;
   padding-top: 20px;
@@ -59,7 +65,7 @@ export default {
   color: #ffffff;
 }
 .percer .percer_top {
-  height: 160px;
+  height: 100px;
   width: 100%;
   background-color: rgba(52, 120, 247, 1);
 }
@@ -78,7 +84,7 @@ export default {
 
   .wenzi {
     margin-left: 20px;
-
+    margin-top: 5px;
     .xia {
       margin-top: 8px;
     }
@@ -98,6 +104,7 @@ export default {
 
     p {
       padding-left: 10px;
+      margin-top: 11px;
     }
   }
   .yingzi {

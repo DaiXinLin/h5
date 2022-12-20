@@ -1,6 +1,6 @@
 <template>
   <div class="changepeople">
-    <van-nav-bar title="选择就诊人" left-arrow @click-left="onClickLeft" />
+    <van-nav-bar title="选择就诊人" left-arrow />
     <div class="content">
       <span>请选择就诊人</span>
     </div>
@@ -42,7 +42,6 @@ export default {
   },
   computed: {
     obj() {
-      console.log(Object.values({}));
       return this.options.reduce((res, item) => {
         res[item.value] = item.label;
         return res;
@@ -50,26 +49,26 @@ export default {
     },
   },
   mounted() {
-    setTimeout(() => {
-      this.options = [
-        {
-          label: "本人",
-          value: 1,
-        },
-        {
-          label: "夫妻",
-          value: 2,
-        },
-        {
-          label: "子女",
-          value: 3,
-        },
-        {
-          label: "父母",
-          value: 4,
-        },
-      ];
-    }, 30);
+    // setTimeout(() => {
+    this.options = [
+      {
+        label: "本人",
+        value: 1,
+      },
+      {
+        label: "夫妻",
+        value: 2,
+      },
+      {
+        label: "子女",
+        value: 3,
+      },
+      {
+        label: "父母",
+        value: 4,
+      },
+    ];
+    // }, 30);
   },
 };
 </script>
@@ -82,18 +81,19 @@ export default {
   margin: 10px 15px;
   li {
     background-color: rgba(0, 110, 255, 0.067);
-    padding: 1px 18px;
-    border-radius: 12px;
+    padding: 25px 18px;
+    border-radius: 8px;
     .people {
       font-size: 12px;
       background-color: rgba(0, 110, 255, 0.208);
-      padding: 5px 10px;
+      padding: 3px 10px;
       margin-left: 8px;
-      border-radius: 40px;
+      border-radius: 50px;
     }
     .idcard {
       font-size: 14px;
       color: #aaaaaa;
+      padding-top: 15px;
     }
   }
 }

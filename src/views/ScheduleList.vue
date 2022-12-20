@@ -1,6 +1,6 @@
 <template>
   <div class="schedule">
-    <van-nav-bar title="选择科室" left-arrow @click-left="onClickLeft" />
+    <van-nav-bar title="选择科室" left-arrow />
     <van-tabs v-model="active">
       <van-tab title="湖南院区">
         <van-tree-select
