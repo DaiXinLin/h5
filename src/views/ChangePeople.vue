@@ -1,6 +1,6 @@
 <template>
   <div class="changepeople">
-    <van-nav-bar title="选择就诊人" left-arrow />
+    <van-nav-bar title="选择就诊人" left-arrow @click-left="onClickLeft8" />
     <div class="content">
       <span>请选择就诊人</span>
     </div>
@@ -37,6 +37,11 @@ export default {
     changepeople() {
       this.$router.push({
         path: "/schedule",
+      });
+    },
+    onClickLeft8() {
+      this.$router.push({
+        path: "/home",
       });
     },
   },

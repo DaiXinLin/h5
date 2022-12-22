@@ -1,26 +1,13 @@
 <template>
   <div class="schedule">
-    <van-nav-bar title="选择科室" left-arrow />
+    <van-nav-bar title="选择科室" left-arrow @click-left="onClickLeft9" />
     <van-tabs v-model="active">
-      <van-tab title="湖南院区">
+      <van-tab v-for="(item, i) in tabs" :key="i" :title="item.title">
         <van-tree-select
           :items="items"
           :active-id.sync="activeId"
           :main-active-index.sync="activeIndex"
-        />
-      </van-tab>
-      <van-tab title="东院">
-        <van-tree-select
-          :items="items"
-          :active-id.sync="activeId"
-          :main-active-index.sync="activeIndex"
-        />
-      </van-tab>
-      <van-tab title="北院">
-        <van-tree-select
-          :items="items"
-          :active-id.sync="activeId"
-          :main-active-index.sync="activeIndex"
+          @click-item="handleclick"
         />
       </van-tab>
     </van-tabs>
@@ -31,6 +18,17 @@
 export default {
   data() {
     return {
+      tabs: [
+        {
+          title: "湖南院区",
+        },
+        {
+          title: "湖南院区",
+        },
+        {
+          title: "湖南院区",
+        },
+      ],
       active: 0,
       items: [
         {
@@ -66,7 +64,18 @@ export default {
       activeIndex: 0,
     };
   },
-  methods() {},
+  methods: {
+    handleclick() {
+      this.$router.push({
+        path: "/scheduleplan",
+      });
+    },
+    onClickLeft9() {
+      this.$router.push({
+        path: "/change",
+      });
+    },
+  },
 };
 </script>
 
